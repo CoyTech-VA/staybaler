@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="container section" role="status" aria-label="Loading stays"><div className="skeleton title-skeleton"/><div className="hotel-grid">{[1,2,3,4].map(n=><div key={n} className="skeleton card-skeleton"/>)}</div></div>;}

@@ -1,0 +1,1 @@
+import {rooms,resort} from '@/data/resort'; export function GET(){return Response.json({resort,rooms});}

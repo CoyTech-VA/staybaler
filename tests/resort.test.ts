@@ -1,0 +1,4 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {rooms,activities,resort} from '../data/resort.ts';
+test('one resort with six unique room types',()=>{assert.equal(resort.name,'StayBaler Beach Resort');assert.equal(rooms.length,6);assert.equal(new Set(rooms.map(r=>r.slug)).size,6);});
+test('large groups have suitable room choices',()=>{const choices=rooms.filter(r=>r.guests>=5);assert.ok(choices.some(r=>r.slug==='family-suite'));assert.ok(choices.some(r=>r.slug==='barkada-loft'));assert.ok(!choices.some(r=>r.slug==='garden-king'));});
+test('activities include guest pool access and paid offers',()=>{assert.equal(activities.length,6);assert.equal(activities.find(a=>a.slug==='pool-day')?.price,0);assert.ok(activities.some(a=>a.price>0));});

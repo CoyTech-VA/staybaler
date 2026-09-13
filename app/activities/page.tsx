@@ -1,0 +1,3 @@
+import {ActivityBrowser} from '@/components/resort';
+export const metadata={title:'Resort activities & experiences'};
+export default function Activities(){return <div className="container section"><p className="eyebrow">STAYBALER BEACH RESORT · EXPERIENCES</p><h1 className="page-title">Fill your days.<br/>Or leave them wide open.</h1><p className="page-intro">Surf, stretch, explore, and dine. Discover the activities offered in our fictional resort experience.</p><ActivityBrowser/><p className="sample-note">All activities, schedules, inclusions, and rates are mock offers. Images are illustrative. No activity reservation or payment is collected.</p></div>;}
